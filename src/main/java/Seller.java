@@ -6,7 +6,7 @@ public class Seller extends Thread{
             synchronized (Main.cars){
                 Main.cars.add("Toyota");
                 System.out.println("Seller make new car: " + Main.cars.get(0));
-                Main.cars.notify();
+                Main.cars.notifyAll();
                 try {
                     Thread.sleep(Main.PREPARATION_TIME);
                 } catch (InterruptedException ex){
